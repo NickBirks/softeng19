@@ -4,8 +4,8 @@ This is a 300-level course.  Given the advanced nature of this course, students 
 
 ## Software Development Lifecycle (SDLC) Models
 
-* [Nayan B. Ruparelia. 2010. Software development lifecycle models. SIGSOFT Softw. Eng. Notes 35, 3 (May 2010), 8-13.](reading/p8-ruparelia.pdf)
-* [Unnati S. Shah. 2016. An Excursion to Software Development Life Cycle Models: An Old to Ever-growing Models. SIGSOFT Softw. Eng. Notes 41, 1 (February 2016), 1-6.](reading/p36a-shah.pdf)
+* [Nayan B. Ruparelia. 2010. Software development lifecycle models. SIGSOFT Softw. Eng. Notes 35, 3 (May 2010), 8-13.](p8-ruparelia.pdf)
+* [Unnati S. Shah. 2016. An Excursion to Software Development Life Cycle Models: An Old to Ever-growing Models. SIGSOFT Softw. Eng. Notes 41, 1 (February 2016), 1-6.](p36a-shah.pdf)
 
 ## Git and GitHub
 
