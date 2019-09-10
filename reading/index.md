@@ -22,3 +22,13 @@ This is a 300-level course.  Given the advanced nature of this course, students 
 
 * [PEP 8 - Style Guide for Python](https://www.python.org/dev/peps/pep-0008/)
 * [How to Write Beautiful Python Code With PEP 8](https://realpython.com/python-pep8/)
+
+## Python
+
+* [RealPython: Python Modules and Packages – An Introduction](https://realpython.com/python-modules-packages/#python-packages)
+* [Structuring Your Project](https://docs.python-guide.org/writing/structure/)
+
+## Unit Testing
+
+* [RealPython: Getting Started With Testing in Python](https://realpython.com/python-testing/)
+* [pytest](https://docs.pytest.org/en/latest/)
