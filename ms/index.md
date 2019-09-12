@@ -4,6 +4,7 @@ Table of Contents:
 * [Introduction to the Project](#introduction-to-the-project)
 * [General Milestone Instructions](#general-milestone-instructions)
 * [The Issues Backlog](#the-issues-backlog)
+* [Grading of Milestones](#grading-of-milestones)
 * [Milestone 1](#milestone-1)
 
 ## Introduction to the Project
@@ -16,13 +17,13 @@ to answer right away are:
 1. What arguments should drive its use?  That is, what is the command-line
 interface for tracking time?
 
-For example, if you gave your utility the incredibly boring name `timer`, you
+For example, if you gave your utility the incredibly boring name `tracker`, you
 might elect to have users track time spent on Software Engineering class like
 this:
 
 ```
-timer start softeng
-timer stop softeng
+tracker start softeng
+tracker stop softeng
 ```
 
 This is just an example.  Again, you will determine what the command-line interface will look like, though over the course of the semester you will be restricted somewhat by the instructions for each milestone.
@@ -41,7 +42,21 @@ All issues and the milestone should be appropriately closed by class time on the
 
 ## The Issues Backlog
 
-Over time, it is likely that you will have more issues in GitHub Issues than you have as part of your current milestone.  Issues are a great way to track not only needed code for features and bug fixes, but also needed design discussions (e.g., "Where should we store our timer information and what should the format look like?").
+Over time, it is likely that you will have more issues in GitHub Issues than you have as part of your current milestone.  Issues are a great way to track not only needed code for features and bug fixes, but also needed design discussions (e.g., "Where should we store our tracker information and what should the format look like?").
+
+## Grading of Milestones
+
+Milestones will be evaluated on the following criteria.
+
+* How well you curate issues and group them into a milestone.
+* How well you participate in evaluation of Pull Requests.
+* How well you code.  Did you close issues, and to what degree is your code reliable and maintainable?
+
+Starting with milestone 3, you will also be judged on the presence of unit tests and the test coverage of your code base.
+
+Also, starting in a future milestone (to be determined), you will be judged on your design documentation.  You will be notified in that future milestone description when it is posted.
+
+Finally, you will be judged based on your participation on the team for each milestone.  If it's clear an individual is not participating adequately, that individual's grade will be reduced.
 
 ## Milestone 1
 
@@ -49,8 +64,8 @@ Over time, it is likely that you will have more issues in GitHub Issues than you
 
 For this milestone, you'll need to do three things.
 
-* Give your timer program a `start` subcommand that works.  You get to choose the name and syntax.
-* Give your timer program a `stop` or `end` subcommand that works.  You get to choose the name and syntax.
-* Agree on where you will store the data your timer records and the format of that data.  This should be documented in its own issue.
+* Give your tracker program a `start` subcommand that works.  You get to choose the name and syntax.  It should be clearly documented in your issue description and/or issue comments.
+* Give your tracker program a `stop` or `end` subcommand that works.  You get to choose the name and syntax.  It should be clearly documented in your issue description and/or issue comments.
+* Agree on where you will store the data your tracker records and the format of that data.  This should be documented in its own issue.
 
 Separate developer pairs should work on each of the above.
