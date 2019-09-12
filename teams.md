@@ -1,6 +1,6 @@
 # Teams
 
-## Team 1 - NO TEAM NAME SUBMITTED
+## Team 1 - The Boys From Down Dunder
 * Brown, Bradley Alexander
 * Brown, Conner Daley
 * Martin, Michael David
@@ -24,7 +24,7 @@
 * McCuin, Tanner Scott
 * Uribe, Marco Antonio
 
-## Team 5 - NO TEAM NAME SUBMITTED
+## Team 5 - 5 Man Band
 * Birks, Nicholas Keith
 * Coats, Sean Robert
 * Daughenbaugh, Caleb John
