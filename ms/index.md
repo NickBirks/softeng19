@@ -34,11 +34,11 @@ The Project Manager (PM) for your first milestone will be the first person liste
 
 All project issues, features, bugs, etc., will be described in separate GitHub Issues in your project's repository.  We will refer to this as your *backlog*.  Your PM will be responsible for adding these.  Some issues will come from individual milestone descriptions (see below).  Some may be entered by your instructor.  Some can come from your own creative ideas (e.g., "Wouldn't it be cool if we supported Feature X...?").
 
-At the start of each milestone sprint, your team will have a stand-up meeting in your team's work location (to be assigned by the instructor).  Your PM will place the issues you will work on for the sprint into a GitHub Milestone.  Each issue will be assigned to no fewer than two developers.
+At the start of each milestone sprint, your team will have a stand-up meeting in your team's work location (to be assigned by the instructor).  Your PM will place the issues you will work on for the sprint into a GitHub Milestone.  Each issue will be assigned to no fewer than two developers.  The name of the acting PM should be specified in the milestone's description.
 
-Coding work on an issue should be done in Git branches.  Branches should be merged through the creation of a Pull Request (PR).  One of the assigned developers should create the PR.  It is the responsibility of the PM to assign at least two reviewers to each PR.  There should be *substantive* discussion on each PR before the associated code is merged into the `master` branch.  A comment like "Looks good!" is only acceptable if the code is exceptionally bullet-proof and well-organized with respect to known design principles (e.g., coupling, cohesion, SOLID, etc.), and even then you should probably comment on *why* the code looks exceptionally bullet-proof and well-organized.
+Coding work on an issue should be done in Git branches.  Branches should be merged through the creation of a Pull Request (PR).  One of the assigned developers should create the PR.  It is the responsibility of the PM to assign at least two reviewers to each PR.  There should be *substantive* discussion on each PR before the associated code is merged into the `master` branch.  A comment like "Looks good!" is only somewhat acceptable if the code is exceptionally bullet-proof and well-organized with respect to known design principles (e.g., coupling, cohesion, SOLID, etc.), and even then you should probably also comment on *why* the code looks exceptionally bullet-proof and well-organized.
 
-All issues and the milestone should be appropriately closed by class time on the due date.  If for some reason an issue is not completed, the reason should be thoroughly documented via a comment on the GitHub Issue itself.
+All issues for the milestone should be closed by class time on the due date.  If for some reason an issue is not completed, the reason should be thoroughly documented via a comment on the GitHub Issue itself.
 
 ## The Issues Backlog
 
@@ -49,8 +49,8 @@ Over time, it is likely that you will have more issues in GitHub Issues than you
 Milestones will be evaluated on the following criteria.
 
 * How well you curate issues and group them into a milestone.
-* How well you participate in evaluation of Pull Requests.
-* How well you code.  Did you close issues, and to what degree is your code reliable and maintainable?
+* How well you participate in evaluation of Pull Requests, and whether issues are closed using Pull Requests whenever the issue is resolved by merging code into the master branch.
+* How well you code.  Did you close issues, and to what degree is your code reliable and maintainable?  This includes the elimination of debugging code, junk files, etc.
 
 Starting with milestone 3, you will also be judged on the presence of unit tests and the test coverage of your code base.
 
