@@ -62,10 +62,14 @@ Finally, you will be judged based on your participation on the team for each mil
 
 *Stand-up: 9/17, Due: 9/24*
 
-For this milestone, you'll need to do three things. Each of the three should reside in its own issue.
+For this milestone, your primary focus is to do three things. Each of the three should reside in its own issue.
 
 * Give your tracker program a `start` subcommand that works.  You get to choose the name and syntax.  It should be clearly documented in your issue description and/or issue comments.
 * Give your tracker program a `stop` or `end` subcommand that works.  You get to choose the name and syntax.  It should be clearly documented in your issue description and/or issue comments.
 * Agree on where you will store the data your tracker records and the format of that data.  This should be documented in its own issue.  Note that this issue will not be closed by a PR since it is not resolved through code.  Your PM will close the issue manually.  However, you may want to finish this issue first through commentary as a team since the previous two issues depend on it.
 
 Separate developer pairs should work on each of the above.
+
+After you have completed the above three things, you must update your project's
+`README.md` file.  At a bare minimum, the `README.md` file must briefly describe
+the project and then provide information on how to run your tracker program.
