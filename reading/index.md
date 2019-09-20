@@ -32,3 +32,6 @@ This is a 300-level course.  Given the advanced nature of this course, students 
 
 * [RealPython: Getting Started With Testing in Python](https://realpython.com/python-testing/)
 * [pytest](https://docs.pytest.org/en/latest/)
+* [pytest fixtures](https://docs.pytest.org/en/latest/fixture.html)
+* [Medium - Intro to test framework Pytest](https://medium.com/testcult/intro-to-test-framework-pytest-5b1ce4d011ae)
+* [Testing Python Applications with Pytest](https://semaphoreci.com/community/tutorials/testing-python-applications-with-pytest)
