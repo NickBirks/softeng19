@@ -50,7 +50,7 @@ Milestones will be evaluated on the following criteria.
 
 * How well you curate issues and group them into a milestone.
 * How well you participate in evaluation of Pull Requests, and whether issues are closed using Pull Requests whenever the issue is resolved by merging code into the master branch.
-* How well you code.  Did you close issues, and to what degree is your code reliable and maintainable?  This includes the elimination of debugging code, junk files, etc.  Does your code comply with PEP8 (hint: use the `pycodestyle` tool to check code for you)?
+* How well you code.  Did you close issues, and to what degree is your code *reliable* and *maintainable*?  This includes the elimination of debugging code, junk files, etc.  Is your code easy to crash, or does it properly check inputs and preconditions?  Does your code comply with PEP8 (hint: use the `pycodestyle` tool to check code for you)?
 
 Starting with milestone 3, you will also be judged on the presence of unit tests and the test coverage of your code base.
 
