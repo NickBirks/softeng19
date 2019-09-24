@@ -50,7 +50,7 @@ Over time, it is likely that you will have more issues in GitHub Issues than you
 Milestones will be evaluated on the following criteria.
 
 * How well you curate issues and group them into a milestone.
-* How well you participate in evaluation of Pull Requests, and whether issues are closed using Pull Requests whenever the issue is resolved by merging code into the master branch.
+* How well you participate in evaluation of Pull Requests, and whether issues are closed using Pull Requests whenever the issue is resolved by merging code into the master branch.  Issues should be automatically closed by the closing of a PR provided you properly reference the issue number in the body of the PR (see ["Closing issues using keywords"](https://help.github.com/en/articles/closing-issues-using-keywords))
 * How well you code.  Did you close issues, and to what degree is your code *reliable* and *maintainable*?  This includes the elimination of debugging code, junk files, etc.  Is your code easy to crash, or does it properly check inputs and preconditions?  Does your code comply with PEP8 (hint: use the `pycodestyle` tool to check code for you)?
 
 Starting with milestone 3, you will also be judged on the presence of unit tests and the test coverage of your code base.
@@ -83,7 +83,7 @@ Prior to beginning this milestone, please consider the following reminders.
 
 * The code in `master` should always be runnable code.  It should never possess "compile" errors.  This should be true not just at the end of each sprint/milestone, but throughout the entire life of the project.
 
-* *All* code changes must be reviewed as part of a pull request.  If you create issues and fix them via code beyond the issues your instructor assigns, that code must still be reviewed as part of a pull request.  All code gets reviewed by other developers before it gets merged into `master`.
+* *All* code changes must be reviewed as part of a pull request.  If you create issues and fix them via code beyond the issues your instructor assigns, that code must still be reviewed as part of a pull request.  All code gets reviewed by other developers before it gets merged into `master`.  All PRs should automatically close one or more issues (again, see ["Closing issues using keywords"](https://help.github.com/en/articles/closing-issues-using-keywords)).
 
 * Code should be reliable and maintainable. It should be reliable in that it is devoid of bugs.  It should be maintainable in the sense that it is organized in such a way that it anticipates the addition of future features.
 
