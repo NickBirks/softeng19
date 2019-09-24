@@ -81,7 +81,7 @@ the project and then provide information on how to run your tracker program.
 
 Prior to beginning this milestone, please consider the following reminders.
 
-* The code in `master` should always be runnable code.  It should never possess "compile" errors.
+* The code in `master` should always be runnable code.  It should never possess "compile" errors.  This should be true not just at the end of each sprint/milestone, but throughout the entire life of the project.
 
 * *All* code changes must be reviewed as part of a pull request.  If you create issues and fix them via code beyond the issues your instructor assigns, that code must still be reviewed as part of a pull request.  All code gets reviewed by other developers before it gets merged into `master`.
 
