@@ -91,8 +91,15 @@ With these considerations in mind, in this milestone you will complete the follo
 
 1. Give your tracker program a `labels` subcommand that displays a listing of the labels that have been tracked so far by your tracker program.
 
-2. Give your tracker program a `summary` subcommand that displays the amount of time spent on each label as well as an overall percentage of how much time has been spent on each label.
+1. Give your tracker program a `summary` subcommand that displays the amount of time spent on each label as well as an overall percentage of how much time has been spent on each label.
 
-3. Update your `README.md` to include precise instructions on installing, developing, and running your code.
+1. Give your tracker program an `init` subcommand that re-starts the tracking of your timing data.  If this is the first use of the tracker program, `init` should simply prepare your data folders/files/databases/etc. for use.  If you already have data stored, `init` should first ask interactively whether you wish to overwrite your existing data.  Here is an example (and this is only an example).
 
-4. Identify bugs introduced in [Milestone 1](#milestone-1), create issues for them (labeled 'bug'), and fix them.
+```
+shep@galaxy:~$ tracker init
+/Users/shep/.tracker exists. Do you wish to overwrite (y/n)?
+```
+
+1. Update your `README.md` to include precise instructions on installing, developing, and running your code.
+
+1. Identify bugs introduced in [Milestone 1](#milestone-1), create issues for them (labeled 'bug'), and fix them.
