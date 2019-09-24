@@ -95,10 +95,10 @@ With these considerations in mind, in this milestone you will complete the follo
 
 1. Give your tracker program an `init` subcommand that re-starts the tracking of your timing data.  If this is the first use of the tracker program, `init` should simply prepare your data folders/files/databases/etc. for use.  If you already have data stored, `init` should first ask interactively whether you wish to overwrite your existing data.  Here is an example (and this is only an example) if your data were to be stored under the directory `~/.tracker`.
 
-```
-shep@galaxy:~$ tracker init
-/Users/shep/.tracker exists. Do you wish to overwrite (y/n)?
-```
+    ```
+    shep@galaxy:~$ tracker init
+    /Users/shep/.tracker exists. Do you wish to overwrite (y/n)?
+    ```
 
 1. Update your `README.md` to include precise instructions on installing, developing, and running your code.
 
