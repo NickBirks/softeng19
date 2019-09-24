@@ -6,6 +6,7 @@ Table of Contents:
 * [The Issues Backlog](#the-issues-backlog)
 * [Grading of Milestones](#grading-of-milestones)
 * [Milestone 1](#milestone-1)
+* [Milestone 2](#milestone-2)
 
 ## Introduction to the Project
 
@@ -64,12 +65,34 @@ Finally, you will be judged based on your participation on the team for each mil
 
 For this milestone, your primary focus is to do three things. Each of the three should reside in its own issue.
 
-* Give your tracker program a `start` subcommand that works.  You get to choose the name and syntax.  It should be clearly documented in your issue description and/or issue comments.
-* Give your tracker program a `stop` or `end` subcommand that works.  You get to choose the name and syntax.  It should be clearly documented in your issue description and/or issue comments.
-* Agree on where you will store the data your tracker records and the format of that data.  This should be documented in its own issue.  Note that this issue will not be closed by a PR since it is not resolved through code.  Your PM will close the issue manually.  However, you may want to finish this issue first through commentary as a team since the previous two issues depend on it.
+1. Give your tracker program a `start` subcommand that works.  You get to choose the name and syntax.  It should be clearly documented in your issue description and/or issue comments.
+1. Give your tracker program a `stop` or `end` subcommand that works.  You get to choose the name and syntax.  It should be clearly documented in your issue description and/or issue comments.
+1. Agree on where you will store the data your tracker records and the format of that data.  This should be documented in its own issue.  Note that this issue will not be closed by a PR since it is not resolved through code.  Your PM will close the issue manually.  However, you may want to finish this issue first through commentary as a team since the previous two issues depend on it.
 
 Separate developer pairs should work on each of the above.
 
 After you have completed the above three things, you must update your project's
 `README.md` file.  At a bare minimum, the `README.md` file must briefly describe
 the project and then provide information on how to run your tracker program.
+
+## Milestone 2
+
+*Stand-up: 9/24, Due: 10/1*
+
+Prior to beginning this milestone, please consider the following reminders.
+
+* The code in `master` should always be runnable code.  It should never possess "compile" errors.
+
+* *All* code changes must be reviewed as part of a pull request.  If you create issues and fix them via code beyond the issues your instructor assigns, that code must still be reviewed as part of a pull request.  All code gets reviewed by other developers before it gets merged into `master`.
+
+* Code should be reliable and maintainable. It should be reliable in that it is devoid of bugs.  It should be maintainable in the sense that it is organized in such a way that it anticipates the addition of future features.
+
+With these considerations in mind, in this milestone you will complete the following.
+
+1. Give your tracker program a `labels` subcommand that displays a listing of the labels that have been tracked so far by your tracker program.
+
+2. Give your tracker program a `summary` subcommand that displays the amount of time spent on each label as well as an overall percentage of how much time has been spent on each label.
+
+3. Update your `README.md` to include precise instructions on installing, developing, and running your code.
+
+4. Identify bugs introduced in [Milestone 1](#milestone-1), create issues for them (labeled 'bug'), and fix them.
