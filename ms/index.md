@@ -113,9 +113,9 @@ Complete the following, at a minimum.
 
 1. Modify your `init` subcommand to accept an optional argument. The argument will be a "tag" for a completely new data store of timing information.
 
-  Suppose the user typed `tracker init` and then `tracker start softeng` and `tracker stop softeng`.  This sequence of commands would  initialize your data in the default location and then track the timing in that default location.  The name of the default location should be called `default`. That is, `tracker init` should be synonymous with `tracker init default`.
+    Suppose the user typed `tracker init` and then `tracker start softeng` and `tracker stop softeng`.  This sequence of commands would  initialize your data in the default location and then track the timing in that default location.  The name of the default location should be called `default`. That is, `tracker init` should be synonymous with `tracker init default`.
 
-  Then, if one were to type `tracker init gaming` and then `tracker start reddead2` and `tracker stop reddead2`, this would create an entirely new data store separate from where the user previous timed their `softeng` task.
+    Then, if one were to type `tracker init gaming` and then `tracker start reddead2` and `tracker stop reddead2`, this would create an entirely new data store separate from where the user previous timed their `softeng` task.
 
 1. Create a `switch` subcommand that switches from one data store to another given a required argument the data store's name.  For example, and in reference to the previous requirement, suppose users typed `tracker switch default`.  Then, they would only be able to see summary information for the `softeng` task they have timed.  If they switched back using `tracker switch gaming`, they would then see the `reddead2` information they timed while tracking under the `gaming` data store.
 
