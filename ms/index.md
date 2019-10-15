@@ -119,6 +119,8 @@ Complete the following, at a minimum.
 
 1. Create a `switch` subcommand that switches from one data store to another given a required argument the data store's name.  For example, and in reference to the previous requirement, suppose users typed `tracker switch default`.  Then, they would only be able to see summary information for the `softeng` task they have timed.  If they switched back using `tracker switch gaming`, they would then see the `reddead2` information they timed while tracking under the `gaming` data store.
 
+1. Create a `wipe` subcommand.  `wipe` deletes a data store without creating a new one in its place.  `wipe` should have an optional argument, which is the name of the data store.  Without the argument, `wipe` deletes the default data store.
+
 1. Implement *unit tests* using `pytest` as we did in class.  Cumulatively, your tests should run as much of your project code as possible.  You will want to clearly separate your code into two subfolders: one for your project code itself, and one for testing (name your testing folder `tests`).  Your tests must be *isolated*.  This means that the tests should run in their own environment and should not affect or pollute any pre-existing time data that you have tracked.
 
 1. Create a StarUML class diagram of your classes, and place the `.mdj` file into a folder named `doc`.  Use the class diagram to refactor your code and make it more object-oriented.  This will ultimately make your code easier to test.
