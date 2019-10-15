@@ -107,11 +107,11 @@ With these considerations in mind, in this milestone you will complete the follo
 
 ## Milestone 3
 
-*Stand-up: 10/8, Due: 10/15*
+*Stand-up: 10/8, Due: 10/22 (Note new due date)*
 
 Complete the following, at a minimum.
 
-1. Modify your `init` subcommand to accept an optional argument. The argument will be a "tag" for a completely new data store of timing information.
+1. Modify your `init` subcommand to accept an optional argument. The argument will be a "data store name" for a completely new data store of timing information.
 
     Suppose the user typed `tracker init` and then `tracker start softeng` and `tracker stop softeng`.  This sequence of commands would  initialize your data in the default location and then track the timing in that default location.  The name of the default location should be called `default`. That is, `tracker init` should be synonymous with `tracker init default`.
 
@@ -119,9 +119,9 @@ Complete the following, at a minimum.
 
 1. Create a `switch` subcommand that switches from one data store to another given a required argument the data store's name.  For example, and in reference to the previous requirement, suppose users typed `tracker switch default`.  Then, they would only be able to see summary information for the `softeng` task they have timed.  If they switched back using `tracker switch gaming`, they would then see the `reddead2` information they timed while tracking under the `gaming` data store.
 
-1. Implement *unit tests* using `pytest` as we did in class.  Cumulatively, your tests should run as much of your project code as possible.  You will want to clearly separate your code into two subfolders: one for your project code itself, and one for testing (name your testing folder `tests`).
+1. Implement *unit tests* using `pytest` as we did in class.  Cumulatively, your tests should run as much of your project code as possible.  You will want to clearly separate your code into two subfolders: one for your project code itself, and one for testing (name your testing folder `tests`).  Your tests must be *isolated*.  This means that the tests should run in their own environment and should not affect or pollute any pre-existing time data that you have tracked.
 
-1. Create a StarUML class diagram of your classes, and place the `.mdj` file into a folder named `doc`.  This suggests that you may want to make your code more object-oriented when you are thinking about testing your code in the previous requirement.
+1. Create a StarUML class diagram of your classes, and place the `.mdj` file into a folder named `doc`.  Use the class diagram to refactor your code and make it more object-oriented.  This will ultimately make your code easier to test.
 
 1. Keep your `README.md` file up to date (do this always!). One thing to think about is whether moving your project code to a separate folder requires you to modify how you are now running the program (e.g., `python -m tracker start softeng`).
 
