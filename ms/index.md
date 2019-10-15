@@ -121,6 +121,16 @@ Complete the following, at a minimum.
 
 1. Create a `wipe` subcommand.  `wipe` deletes a data store without creating a new one in its place.  `wipe` should have an optional argument, which is the name of the data store.  Without the argument, `wipe` deletes the default data store.  Thus, `tracker wipe` is be synonymous with `tracker wipe default`.  `init` is different than `wipe` in that `init` wipes and then re-creates a data store.
 
+    `wipe` should ask interactively whether you wish to delete your existing data, and it should explicitly mention the name of the data store the user will wipe.  Here are  examples (and these are only examples).
+
+    ```
+    shep@galaxy:~$ tracker wipe gaming
+    Are you sure you wish to wipe "gaming" (y/n)?
+
+    shep@galaxy:~$ tracker wipe
+    Are you sure you wish to wipe "default" (y/n)?
+    ```
+
 1. Implement *unit tests* using `pytest` as we did in class.  Cumulatively, your tests should run as much of your project code as possible.  You will want to clearly separate your code into two subfolders: one for your project code itself, and one for testing (name your testing folder `tests`).  Your tests must be *isolated*.  This means that the tests should run in their own environment and should not affect or pollute any pre-existing time data that you have tracked.
 
 1. Create a StarUML class diagram of your classes, and place the `.mdj` file into a folder named `doc`.  Use the class diagram to refactor your code and make it more object-oriented.  This will ultimately make your code easier to test.
