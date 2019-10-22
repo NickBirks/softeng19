@@ -8,6 +8,7 @@ Table of Contents:
 * [Milestone 1](#milestone-1)
 * [Milestone 2](#milestone-2)
 * [Milestone 3](#milestone-3)
+* [Milestone 4 - the Rendezvous](#milestone-4)
 
 ## Introduction to the Project
 
@@ -138,3 +139,37 @@ Complete the following, at a minimum.
 1. Keep your `README.md` file up to date (do this always!). One thing to think about is whether moving your project code to a separate folder requires you to modify how you are now running the program (e.g., `python -m tracker start softeng`).
 
 1. Identify bugs introduced in [Milestone 2](#milestone-2), if any.  Create issues for them (labeled 'bug') and fix them.
+
+## Milestone 4
+
+*Stand-up: 10/22, Due: TBA*
+
+This is the *Rendezvous* milestone.  Beginning with this milestone, we have our [new merged teams](../teams-rend.md).  The major overarching activity of the Rendezvous milestone is supporting multiple users by allowing projects to either be locally managed (which is what we've been doing) or remotely managed (which is new).
+
+A project may now have one or more users, and a project will either be local or remote.  A local project will store all of its label data locally, either in a filesystem or database.  The client program that you have been developing will continue to work in much they same way it does now.  A remote project will be accessible through a Web server interface.  That is, your client program will "talk to" the Web server, and the Web server application will be responsible for starting/stopping remote timers.
+
+The Web server interface has been programmed mostly by your instructor.  The GitHub project containing the starting code can be found [here](https://github.com/jbshep/trolog-server).  We will discuss *at length* the interfaces present in the Web server such that one does not need to understand how to build Web applications in order to interface with it.
+
+A local project will have one user.  A remote project will have one or more users.  With respect to remote projects, one user will create a remote project.  This process will generate a project key.  The user project creator may share this project key with other users so that they can "join" the project and start/stop their own timers.
+
+A timer now tracks not just label starts/stops, but also starts/stops for a particular user.  For example, jbshep's start/stops of the label `bugfixes` for the remote project `softeng` would be different from jbshepspam's start/stops of the label `bugfixes` for the remote project `softeng`.
+
+The features/tasks to be implemented in this milestone are as follows.
+
+1. Test-first: One of your first commits for this milestone should be the `pytest` tests you need for implementing all other features in this milestone.
+
+1. The `init` subcommand should have two forms.
+
+    `tracker init local_proj` should create a local project named `local_proj` much the same way as it does today.  There should be something internal that identifies `local_proj` as a locally stored project (again, on your filesystem or in a database).
+
+    `tracker init --remote=URL remote_proj` should create a remote project `remote_proj` using the Web server application found at `URL`.  An example of this might be:
+
+    ```
+    tracker init --remote=http://localhost:5000 team_panda
+    ```
+
+    The `tracker init --remote` version of the `init` subcommand should print to the screen the project key.
+
+1. The `switch`, `start`, and `stop` commands should still work regardless of whether a project is local or remote.
+
+1. Add a subcommand named `show`.  `show` should print the name of the current project.  If the current project is remote, it should also print the project key.
