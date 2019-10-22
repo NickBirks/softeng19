@@ -12,7 +12,8 @@ The instructor's typical weekly schedule can be found online [here](https://jbsh
 * [Assignments](asgn/index.md)
 * [Lecture Slides](lect/index.md)
 * [Milestone Instructions](ms/index.md)
-* [Teams](teams.md)
+* [Teams - Initial](teams.md)
+* [Teams - Rendezvous](teams-rend.md)
 
 <!---
 "Milestone Instructions" and "Teams" will be released after the beginning of the course.
