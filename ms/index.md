@@ -111,17 +111,17 @@ With these considerations in mind, in this milestone you will complete the follo
 
 Complete the following, at a minimum.
 
-1. Modify your `init` subcommand to accept an optional argument. The argument will be a "data store name" for a completely new data store of timing information.
+1. Modify your `init` subcommand to accept an optional argument. The argument will be a "project name" for a completely new data store of timing information.
 
-    Suppose the user typed `tracker init` and then `tracker start softeng` and `tracker stop softeng`.  This sequence of commands would  initialize your data in the default location and then track the timing in that default location.  The name of the default location should be called `default`. That is, `tracker init` should be synonymous with `tracker init default`.
+    Suppose the user typed `tracker init` and then `tracker start softeng` and `tracker stop softeng`.  This sequence of commands would  initialize your data in the default project location and then track the timing in that default project location.  The name of the default project should be called `default`. That is, `tracker init` should be synonymous with `tracker init default`.
 
-    Then, if one were to type `tracker init gaming` and then `tracker start reddead2` and `tracker stop reddead2`, this would create an entirely new data store separate from where the user previous timed their `softeng` task.
+    Then, if one were to type `tracker init gaming` and then `tracker start reddead2` and `tracker stop reddead2`, this would create an entirely new project separate from where the user previously timed their `softeng` task.
 
-1. Create a `switch` subcommand that switches from one data store to another given a required argument the data store's name.  For example, and in reference to the previous requirement, suppose users typed `tracker switch default`.  Then, they would only be able to see summary information for the `softeng` task they have timed.  If they switched back using `tracker switch gaming`, they would then see the `reddead2` information they timed while tracking under the `gaming` data store.
+1. Create a `switch` subcommand that switches from one project to another given a required argument of the project's name.  For example, and in reference to the previous requirement, suppose users typed `tracker switch default`.  Then, they would only be able to see summary information for the `softeng` task they have timed.  If they switched back using `tracker switch gaming`, they would then see the `reddead2` information they timed while tracking under the `gaming` project.
 
-1. Create a `wipe` subcommand.  `wipe` deletes a data store without creating a new one in its place.  `wipe` should have an optional argument, which is the name of the data store.  Without the argument, `wipe` deletes the default data store.  Thus, `tracker wipe` is be synonymous with `tracker wipe default`.  `init` is different than `wipe` in that `init` wipes and then re-creates a data store.
+1. Create a `wipe` subcommand.  `wipe` deletes a project without creating a new one in its place.  `wipe` should have an optional argument, which is the name of the project.  Without the argument, `wipe` deletes the `default` project.  Thus, `tracker wipe` is be synonymous with `tracker wipe default`.  `init` is different than `wipe` in that `init` wipes and then re-creates a project.
 
-    `wipe` should ask interactively whether you wish to delete your existing data, and it should explicitly mention the name of the data store the user will wipe.  Here are  examples (and these are only examples).
+    `wipe` should ask interactively whether you wish to delete your existing project data, and it should explicitly mention the name of the project the user will wipe.  Here are  examples (and these are only examples).
 
     ```
     shep@galaxy:~$ tracker wipe gaming
