@@ -170,6 +170,12 @@ The features/tasks to be implemented in this milestone are as follows.
 
     The `tracker init --remote` version of the `init` subcommand should print to the screen the project key.
 
-1. The `switch`, `start`, and `stop` commands should still work regardless of whether a project is local or remote.
+1. The `switch`, `start`, `stop`, and `labels` commands should still work regardless of whether a project is local or remote.
 
 1. Add a subcommand named `show`.  `show` should print the name of the current project.  If the current project is remote, it should also print the project key.
+
+You can abandon the `summary` subcommand for this milestone.  We will come back to it in a future milestone.
+
+All work will be done in a new "clean" GitHub repository with your new team name (e.g., https://github.com/jbshep/softeng19-liger).  The client code and server code should both reside in your new repo.  You should keep the client and server code in separate Python modules, and also use modules to share common code between the client and server.  You will note, for example, that the Web server application code resides in a module named `trolog.server`.
+
+You will always need to keep up your README.md file.  It should maintain instructions for installing and running your code (both the client and the server), as well as running your tests.
