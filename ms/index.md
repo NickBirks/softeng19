@@ -146,36 +146,54 @@ Complete the following, at a minimum.
 
 This is the *Rendezvous* milestone.  Beginning with this milestone, we have our [new merged teams](../teams-rend.md).  The major overarching activity of the Rendezvous milestone is supporting multiple users by allowing projects to either be locally managed (which is what we've been doing) or remotely managed (which is new).
 
+Rather than merging our code, we will only merge teams.  This will allow each team to start from a common starting point.  Your team's GitHub repository is of the form https://github.com/jbshep/softeng19-TEAM where `TEAM` is one of `liger`, `minotaur`, or `kraken`.
+
+The new starting code base stores all local information in a filesystem rather than a database.  We will use this approach since it is consistent with the prerequisites of the course (i.e., CMSC 321 is *not* a prerequisite for CMSC 360).  Your instructor will describe in detail during class how this code base stores local projects (e.g. a configuration file named `config` and `projects` directory and its subdirectories).
+
 A project may now have one or more users, and a project will either be local or remote.  A local project will store all of its label data locally, either in a filesystem or database.  The client program that you have been developing will continue to work in much they same way it does now.  A remote project will be accessible through a Web server interface.  That is, your client program will "talk to" the Web server, and the Web server application will be responsible for starting/stopping remote timers.
 
-The Web server interface has been programmed mostly by your instructor.  The GitHub project containing the starting code can be found [here](https://github.com/jbshep/trolog-server).  We will discuss *at length* the interfaces present in the Web server such that one does not need to understand how to build Web applications in order to interface with it.
+The Web server interface has been programmed mostly by your instructor.  It can be found in `trolog/server/__main__.py` and it can be run using the command `./run-server.sh`. We will discuss *at length* the interfaces present in the Web server such that one does not need to understand how to build Web applications in order to interface with it.
 
-A local project will have one user.  A remote project will have one or more users.  With respect to remote projects, one user will create a remote project.  This process will generate a project key.  The user project creator may share this project key with other users so that they can "join" the project and start/stop their own timers.
+A local project will have one user (a "default" user).  A remote project will have one or more users.  With respect to remote projects, one user will create a remote project.  This process will generate a project key.  The user project creator may share this project key with other users so that they can "join" the project and start/stop their own timers.
+
+When a users create a project, they choose their own username for the project (see requirements below).  Thus, a user could have different usernames for different remote projects, or they could reuse the same username.
+
+When a user connects to an existing remote project (that is, the creating user has given them the project key), they also get to choose a username.
 
 A timer now tracks not just label starts/stops, but also starts/stops for a particular user.  For example, jbshep's start/stops of the label `bugfixes` for the remote project `softeng` would be different from jbshepspam's start/stops of the label `bugfixes` for the remote project `softeng`.
 
 The features/tasks to be implemented in this milestone are as follows.
 
-1. Test-first: One of your first commits for this milestone should be the `pytest` tests you need for implementing all other features in this milestone.
+1. Test-first: One of your first commits for this milestone should be the `pytest` tests you need for implementing all other features in this milestone.  Your instructor has created *some* tests already in order to guide your efforts.
 
 1. The `init` subcommand should have two forms.
 
     `tracker init local_proj` should create a local project named `local_proj` much the same way as it does today.  There should be something internal that identifies `local_proj` as a locally stored project (again, on your filesystem or in a database).
 
-    `tracker init --remote=URL remote_proj` should create a remote project `remote_proj` using the Web server application found at `URL`.  An example of this might be:
+    A local project named `local_proj` should still be stored under `projects/local_proj` and have subdirectories `active-timers` and `finished-timers` with text files for each label.
+
+    `tracker init --remote=URL --user=USERNAME remote_proj` should create a remote project `remote_proj` using the Web server application found at `URL`.  An example of this might be:
 
     ```
-    tracker init --remote=http://localhost:5000 team_panda
+    tracker init --remote=http://localhost:5000 --user=jbshep team_panda
     ```
 
-    The `tracker init --remote` version of the `init` subcommand should print to the screen the project key.
+    The `tracker init --remote` version of the `init` subcommand should store the project key locally and then print to the screen the project key.
 
-1. The `switch`, `start`, `stop`, and `labels` commands should still work regardless of whether a project is local or remote.
+    A remote project named `remote_proj` should have information stored at `projects/remote_proj` containing a single file named `remote`.  That file will be a text file (no `.txt` extension, however), and the file's contents should be lines containing colon-separated key-value pairs.  The keys should be `url`, `key`, and `username`.
 
-1. Add a subcommand named `show`.  `show` should print the name of the current project.  If the current project is remote, it should also print the project key.
+1. The `switch`, `start`, `stop`, and `labels` commands should still work regardless of whether a project is local or remote.  You will implement a `RemoteTimer` class that is a subclass of `AbstractTimer` to accomplish this.  Again, we will discuss this at length in class.
+
+1. Add a subcommand named `show`.  `show` should print the name of the current project.  If the current project is remote, it should also print the project key and the username.
 
 You can abandon the `summary` subcommand for this milestone.  We will come back to it in a future milestone.
 
-All work will be done in a new "clean" GitHub repository with your new team name (e.g., https://github.com/jbshep/softeng19-liger).  The client code and server code should both reside in your new repo.  You should keep the client and server code in separate Python modules, and also use modules to share common code between the client and server.  You will note, for example, that the Web server application code resides in a module named `trolog.server`.
+If you're trying to think of ways to split up this milestone into issues and pairs for programming, consider these:
+
+* Implement tests (this needs to happen right away).
+* Implement code in `trolog/cli.py` to support the "remote" version of the `init` subcommand.
+* Implement code in `trolog/config.py` to fully implement the `init` subcommand.
+* Implement RemoteTimer (different methods can be parceled out into separate issues if you so choose, e.g., one pair can do start, another can do stop, etc.).
+* /api/start and /api/stop should return correct error codes (they currently return a type of 'internal'; see `trolog/server/__main__.py` for  comments documenting errors returned from these URLs)
 
 You will always need to keep up your README.md file.  It should maintain instructions for installing and running your code (both the client and the server), as well as running your tests.
