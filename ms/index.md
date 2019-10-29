@@ -142,7 +142,7 @@ Complete the following, at a minimum.
 
 ## Milestone 4
 
-*Stand-up: 10/22, Due: 11/14*
+*Stand-up: 10/29, Due: 11/14*
 
 This is the *Rendezvous* milestone.  Beginning with this milestone, we have our [new merged teams](../teams-rend.md).  The major overarching activity of the Rendezvous milestone is supporting multiple users by allowing projects to either be locally managed (which is what we've been doing) or remotely managed (which is new).
 
