@@ -142,7 +142,7 @@ Complete the following, at a minimum.
 
 ## Milestone 4
 
-*Stand-up: 10/22, Due: TBA*
+*Stand-up: 10/22, Due: 11/14*
 
 This is the *Rendezvous* milestone.  Beginning with this milestone, we have our [new merged teams](../teams-rend.md).  The major overarching activity of the Rendezvous milestone is supporting multiple users by allowing projects to either be locally managed (which is what we've been doing) or remotely managed (which is new).
 
@@ -190,10 +190,12 @@ You can abandon the `summary` subcommand for this milestone.  We will come back 
 
 If you're trying to think of ways to split up this milestone into issues and pairs for programming, consider these:
 
-* Implement tests (this needs to happen right away).
+* Implement tests (this needs to happen right away).  Your instructor has given you some good initial tests.  You should run them to see what they do and which ones fail at first.
 * Implement code in `trolog/cli.py` to support the "remote" version of the `init` subcommand.
 * Implement code in `trolog/config.py` to fully implement the `init` subcommand.
 * Implement RemoteTimer (different methods can be parceled out into separate issues if you so choose, e.g., one pair can do start, another can do stop, etc.).
 * /api/start and /api/stop should return correct error codes (they currently return a type of 'internal'; see `trolog/server/__main__.py` for  comments documenting errors returned from these URLs)
+
+*Features not in this milestone*: There is no summary subcommand.  There is also no way for a user to "connect" to a remote project that is created by another user.  
 
 You will always need to keep up your README.md file.  It should maintain instructions for installing and running your code (both the client and the server), as well as running your tests.
