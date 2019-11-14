@@ -251,7 +251,7 @@ Requirements include:
     You will also have a command named `detail` that works similarly to `summary`, but in `detail` the time should be broken down by user, too (no percentage per user, however).
 
     ```
-    $ trolog summary
+    $ trolog detail
     bug_fix_2           20  (10%)
         jbshep          15
         jbshepspam       5
