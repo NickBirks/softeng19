@@ -9,6 +9,7 @@ Table of Contents:
 * [Milestone 2](#milestone-2)
 * [Milestone 3](#milestone-3)
 * [Milestone 4 - the Rendezvous](#milestone-4)
+* [Milestone 5](#milestone-5)
 
 ## Introduction to the Project
 
@@ -199,3 +200,71 @@ If you're trying to think of ways to split up this milestone into issues and pai
 *Features not in this milestone*: There is no summary subcommand.  There is also no way for a user to "connect" to a remote project that is created by another user.  
 
 You will always need to keep up your README.md file.  It should maintain instructions for installing and running your code (both the client and the server), as well as running your tests.
+
+## Milestone 5
+
+*Stand-up: 11/14, Due: TBD*
+
+Requirements include:
+
+1. Test-first: your first PR should include most if not all tests for the features to be developed in this milestone.
+
+1. At the end of milestone 4, any run of the trolog command first states the name of the current project.  Remove that feature.
+
+1. Create a subcommand named `projects`. It should list all the projects available to the user, as well as whether the project is remote.  Output should be of the following form, and project names should be alphabetized.
+
+    ```
+    $ trolog projects
+    default
+    jobsearch
+    proglang    (remote)
+    * softeng   (remote)
+    studying    
+    ```
+
+    The current project's name should be preceded with an asterisk.  If a project is remote, the project's name should be marked with the string "(remote)" and that string should be aligned with all other "(remote)" strings regardless of the length of the name of the project.
+
+1. Add a `connect` subcommand that allows users to connect to remote projects previously created by another user.  The format of this subcommand is:
+
+    ```
+    trolog connect --remote=HOST --user=USERNAME --key=PROJECT_KEY
+    ```
+
+    You will need to add a URL route to the server to verify the project key and return the actual name of the project.  For example, a project key of `8ax01cvz29` may be associated with a remote project named `softeng` created by a user named `jbshep`.  The route should be `GET /api/project` and the parameter name should be `key`.
+
+    The actual name of the project returned will be the name the user will use locally.  In other words, if `jbshep` creates a project named `softeng`, any user that connects to `softeng` using its project key will also see the project's name as `softeng`.
+
+    If users already have a project named `softeng` locally, this command should fail.
+
+1. Now that multiple users can connect to a remote project, timing data should be recorded on a per label *and* per user basis.
+
+1. With respect to the previous requirement, your team will re-create the `summary` subcommand that shows the distribution of time spent on the labels of the current project.  This should work for both local and remote projects.  Time should be shown in hours (and fractions of an hour) and percentage of overall time.  Columns should be aligned as shown below.
+
+    ```
+    $ trolog summary
+    bug_fix_2           20  (10%)
+    create_task        100  (50%)
+    update_readme       20  (10%)
+    update_task         60  (30%)
+    ```
+
+    You will also have a command named `detail` that works similarly to `summary`, but in `detail` the time should be broken down by user, too (no percentage per user, however).
+
+    ```
+    $ trolog summary
+    bug_fix_2           20  (10%)
+        jbshep          15
+        jbshepspam       5
+    create_task        100  (50%)
+        jbshep          40
+        smith           60
+    ...   etc.          ...  ...
+    ```
+
+1. The operation of `trolog init --remote=HOST --user=USER` is not well-defined according to past milestone requirements.  Since no project name is given in the preceding command, it should technically make a new remote project named `default`.  Normally, `default` is a local project.
+
+    Should `default` always be local?  If so, the preceding command should result in an error.  If not, the command should wipe `default` and place a remote project in its place.  Your team's job will be to decide on what the correct behavior should be, write a test to verify it, and then implement code that handles this situation and passes the test.
+
+1. Update the `help` on the trolog command whenever the user enters an incorrect subcommand.
+
+1. Always keep `README.md` and UML up to date.  UML should not be updated by itself in a PR.  The UML should be updated along with each PR that changes code that requires updates to the UML.  Remember: bad or outdated documentation is worse than having no documentation at all.
