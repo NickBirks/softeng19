@@ -169,17 +169,17 @@ The features/tasks to be implemented in this milestone are as follows.
 
 1. The `init` subcommand should have two forms.
 
-    `tracker init local_proj` should create a local project named `local_proj` much the same way as it does today.  There should be something internal that identifies `local_proj` as a locally stored project (again, on your filesystem or in a database).
+    `trolog init local_proj` should create a local project named `local_proj` much the same way as it does today.  There should be something internal that identifies `local_proj` as a locally stored project (again, on your filesystem or in a database).
 
     A local project named `local_proj` should still be stored under `projects/local_proj` and have subdirectories `active-timers` and `finished-timers` with text files for each label.
 
-    `tracker init --remote=URL --user=USERNAME remote_proj` should create a remote project `remote_proj` using the Web server application found at `URL`.  An example of this might be:
+    `trolog init --remote=URL --user=USERNAME remote_proj` should create a remote project `remote_proj` using the Web server application found at `URL`.  An example of this might be:
 
     ```
-    tracker init --remote=http://localhost:5000 --user=jbshep team_panda
+    trolog init --remote=http://localhost:5000 --user=jbshep team_panda
     ```
 
-    The `tracker init --remote` version of the `init` subcommand should store the project key locally and then print to the screen the project key.
+    The `trolog init --remote` version of the `init` subcommand should store the project key locally and then print to the screen the project key.
 
     A remote project named `remote_proj` should have information stored at `projects/remote_proj` containing a single file named `remote`.  That file will be a text file (no `.txt` extension, however), and the file's contents should be lines containing colon-separated key-value pairs.  The keys should be `url`, `key`, and `username`.
 
